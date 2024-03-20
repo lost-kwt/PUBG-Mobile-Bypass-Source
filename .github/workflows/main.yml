@@ -21,7 +21,7 @@ jobs:
       - name: Modify last update
         run: |
           d='DATE '`date '+%Y-%m-%d %H:%M:%S'`
-          echo $d > LOG
+          echo $d > PUBG
           
       - name: Commit changes
         run: | 
@@ -29,16 +29,16 @@ jobs:
           git config --local user.name "${{ github.repository_owner }}"
           git add -A
           
-          arr[0]="Update"
-          arr[1]="Update"
-          arr[2]="Update"
-          arr[3]="Update"
-          arr[4]="Update"
-          arr[5]="Update"
-          arr[6]="Update"
-          arr[7]="Update"
-          arr[8]="Update"
-          arr[9]="Update"
+          arr[0]="PUBGM Bypass"
+          arr[1]="PUBGM Bypass"
+          arr[2]="PUBGM Bypass"
+          arr[3]="PUBGM Bypass"
+          arr[4]="PUBGM Bypass"
+          arr[5]="PUBGM Bypass"
+          arr[6]="PUBGM Bypass"
+          arr[7]="PUBGM Bypass"
+          arr[8]="PUBGM Bypass"
+          arr[9]="PUBGM Bypass"
           
           rand=$[$RANDOM % ${#arr[@]}]
           
