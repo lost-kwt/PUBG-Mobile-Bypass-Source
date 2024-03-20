@@ -2,7 +2,6 @@
 
 It is a bypass application that allows players using emulators in PUBG Mobile to match with phone users and includes antiban features.
 
-
 ## How to Use?
 
 1. Download the repo to your computer
